@@ -5,10 +5,10 @@ const Temperature = ({temperature, weatherState}) => {
   return (
     <div className="temperature-container">
       <div>
-        <h1>{temperature}</h1>
+        <p>{temperature}</p>
         <span>°C</span>
       </div>
-      <h3>{weatherState}</h3>
+      <p>{weatherState}</p>
     </div>
   )
 }

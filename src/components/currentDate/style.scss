@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+.current-date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  span {
+    color: #88869d;
+  }
+  p {
+    color: #88869d;
+    margin: 10px;
+  }
+}
