@@ -1,0 +1,41 @@
+@import '../../styles/variables';
+.weather-card-container {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p {
+    margin: 0;
+    line-height: 19px;
+  }
+  .card {
+    padding: 15px;
+    margin: 10px;
+  }
+  div {
+    background-color: $currentWeatherBackground;
+    width: 120px;
+    height: 177px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    .temperature {
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      p {
+        margin: 5px;
+        &:last-child {
+          color: #a09fb1;
+        }
+      }
+    }
+  }
+  img {
+    width: 56.44px;
+    height: 62px;
+  }
+}

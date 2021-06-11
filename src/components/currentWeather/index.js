@@ -15,13 +15,19 @@ const CurrentWeather = () => {
       <div className="search-places-location">
         <Button className="search-button">Seach for places</Button>
         <Button className="search-location">
-          <GpsFixedIcon style={{margin:0}}/>
+          <GpsFixedIcon style={{margin: 0}} />
         </Button>
       </div>
-      <WeatherStateImage url={"https://res.cloudinary.com/dhxg3zyjz/image/upload/v1623419204/weather-app/Shower_efwzcr.png"}/>
+      <WeatherStateImage
+        url={
+          'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1623419204/weather-app/Shower_efwzcr.png'
+        }
+      />
       <Temperature temperature={15} weatherState={'Shower'} />
-      <Date date={'Fri, 5 Jun'} />
-      <Location city={'Helsinki'} />
+      <div>
+        <Date date={'Fri, 5 Jun'} />
+        <Location city={'Helsinki'} />
+      </div>
     </div>
   )
 }
