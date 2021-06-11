@@ -1,0 +1,30 @@
+@mixin customMinBreakPoint($size) {
+    @media only screen and(min-width: $size+'px') {
+      @content;
+    }
+  }
+  
+  @mixin customMaxBreakPoint($size) {
+    @media only screen and (max-width: $size+'px') {
+      @content;
+    }
+  }
+  
+  @mixin customMinHeightBreakPoint($size) {
+    @media only screen and(min-height: $size+'px') {
+      @content;
+    }
+  }
+  
+  @mixin customMaxHeightBreakPoint($sizey, $sizex) {
+    @media only screen and (max-height: $sizey+'px') and (min-width: $sizex+'px') {
+      @content;
+    }
+  }
+  
+  @mixin customMin-MaxBreakPoint($minSize, $maxSize) {
+    @media only screen and (max-width: $maxSize+'px') and (min-width: $minSize+'px') {
+      @content;
+    }
+  }
+  
