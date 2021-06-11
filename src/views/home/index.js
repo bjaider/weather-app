@@ -6,8 +6,8 @@ import './style.scss'
 const Home = () => {
   return (
     <div className="home-container">
-      <CurrentWeather/>
-      <WeatherDetails/>
+      <CurrentWeather />
+      <WeatherDetails />
     </div>
   )
 }

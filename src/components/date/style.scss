@@ -1,13 +1,14 @@
 @import '../../styles/variables';
+$textColor: #88869d;
 .current-date-container {
   display: flex;
   justify-content: center;
   align-items: center;
   span {
-    color: #88869d;
+    color: $textColor;
   }
   p {
-    color: #88869d;
+    color: $textColor;
     margin: 10px;
   }
 }
