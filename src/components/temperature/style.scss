@@ -1,0 +1,27 @@
+@import '../../styles/variables';
+.temperature-container {
+  text-align: center;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 80px;
+    h1 {
+      margin: 0;
+      color: $textColor;
+      font-size: 144px;
+      line-height: 100%;
+    }
+    span {
+      color: $textColor;
+      margin: 0;
+      font-size: 48px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 36px;
+    color: #a09fb1;
+  }
+}

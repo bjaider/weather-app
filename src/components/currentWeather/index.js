@@ -1,9 +1,10 @@
 import React from 'react'
+import Temperature from '../temperature'
 import './style.scss'
 const CurrentWeather = () => {
   return (
     <div className="current-weather-container">
-      <h1>Current</h1>
+      <Temperature temperature={15} weatherState={'Shower'} />
     </div>
   )
 }
