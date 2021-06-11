@@ -1,9 +1,11 @@
 import React from 'react'
+import DegreesConverter from '../degreesConverter'
 import WeatherCards from '../weatherCards'
 import './style.scss'
 const WeatherDetails = () => {
   return (
     <div className="weather-details-container">
+      <DegreesConverter/>
       <WeatherCards
         date={'Tomorrow'}
         state={

@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+$buttonColor: #6e707a;
 .current-weather-container {
   background-color: $currentWeatherBackground;
   flex: 1;
@@ -14,16 +15,17 @@
   align-items: center;
   width: 100%;
   .search-button {
-    border-color: #6e707a;
-    background: #6e707a;
+    border-color: $buttonColor;
+    background: $buttonColor;
     color: $textColor;
   }
   .search-location {
-    border-color: #6e707a;
-    background: #6e707a;
+    border-color: $buttonColor;
+    background: $buttonColor;
     color: $textColor;
     border-radius: 500px;
-    padding: 3px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
