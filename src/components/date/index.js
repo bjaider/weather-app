@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-const CurrentDate = ({date}) => {
+const Date = ({date}) => {
   return (
     <div className="current-date-container">
       <p>Today</p>
@@ -10,4 +10,4 @@ const CurrentDate = ({date}) => {
   )
 }
 
-export default CurrentDate
+export default Date
