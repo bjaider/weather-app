@@ -1,5 +1,6 @@
 import React from 'react'
 import DegreesConverter from '../degreesConverter'
+import Hightlights from '../hightlights'
 import WeatherCards from '../weatherCards'
 import './style.scss'
 const WeatherDetails = () => {
@@ -14,6 +15,7 @@ const WeatherDetails = () => {
         max={'16°C'}
         min={'11°C'}
       />
+      <Hightlights/>
     </div>
   )
 }
