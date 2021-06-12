@@ -1,6 +1,13 @@
 import React from 'react'
 import NearMeIcon from '@material-ui/icons/NearMe'
-const HightlightsCards = ({title, content, unit, bottomContent}) => {
+import {Progress} from 'antd'
+const HightlightsCards = ({
+  title,
+  content,
+  unit,
+  windBottomContent,
+  humidityBottomContent,
+}) => {
   return (
     <div className="cards">
       <h1>{title}</h1>
@@ -8,13 +15,15 @@ const HightlightsCards = ({title, content, unit, bottomContent}) => {
         {content}
         <span>{unit}</span>
       </p>
-      {bottomContent ? (
-        <div>
-          <span>
+      {windBottomContent ? (
+        <div className="wind-direction">
+          <span style={{transform: `rotate(${Math.round(windBottomContent[0])-45}deg)`}}>
             <NearMeIcon />
           </span>
-          <p>{bottomContent}</p>
+          <p>{windBottomContent[1]}</p>
         </div>
+      ) : humidityBottomContent ? (
+        <Progress showInfo={false} strokeColor="#FFEC65" percent={50} />
       ) : (
         ''
       )}

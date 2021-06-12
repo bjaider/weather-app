@@ -5,9 +5,10 @@ $buttonColor: #6e707a;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
   .cards {
     background-color: #1e213a;
-    padding: 22px;
+    padding: 22px 50px;
     width: 47.5%;
     margin-bottom: 48px;
     display: flex;
@@ -18,7 +19,7 @@ $buttonColor: #6e707a;
       margin-right: 5%;
     }
 
-    div {
+    .wind-direction {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -32,7 +33,7 @@ $buttonColor: #6e707a;
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: rotate(170deg);
+        /* transform: rotate(-45deg); */
         margin-right: 10px;
       }
       p {

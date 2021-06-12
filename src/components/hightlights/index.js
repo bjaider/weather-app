@@ -7,15 +7,15 @@ const Hightlights = ({data}) => {
     <div className="hightlights-container">
       <HightlightsCards
         title="Wind status"
-        content="7"
-        unit="mph"
-        bottomContent={data.wind_direction_compass}
+        content={Math.round(data.wind_speed)}
+        unit=" mph"
+        windBottomContent={[data.wind_direction, data.wind_direction_compass]}
       />
       <HightlightsCards
         title="Humidity"
         content={data.humidity}
         unit="%"
-        bottomContent="WSW"
+        humidityBottomContent={data.humidity}
       />
       <HightlightsCards
         title="Visibility"
