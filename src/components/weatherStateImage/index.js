@@ -1,12 +1,10 @@
 import React from 'react'
 import './style.scss'
-const WeatherStateImage = ({url}) => {
+const WeatherStateImage = ({src}) => {
+  console.log(src)
   return (
     <div className="weather-state-image-container">
-      <img
-        src={url}
-        alt="Shower"
-      />
+      <img src={src} alt="Shower" />
     </div>
   )
 }

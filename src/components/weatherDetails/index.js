@@ -24,7 +24,7 @@ const WeatherDetails = (props) => {
         data={data}
       />
       <h1>Today’s Hightlights </h1>
-      <Hightlights />
+      <Hightlights data={data.consolidated_weather[0]}/>
     </div>
   )
 }

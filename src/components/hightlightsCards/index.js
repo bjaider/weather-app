@@ -1,5 +1,5 @@
 import React from 'react'
-import './style.scss'
+import NearMeIcon from '@material-ui/icons/NearMe'
 const HightlightsCards = ({title, content, unit, bottomContent}) => {
   return (
     <div className="cards">
@@ -8,9 +8,16 @@ const HightlightsCards = ({title, content, unit, bottomContent}) => {
         {content}
         <span>{unit}</span>
       </p>
-      <div>
-        <p>{bottomContent}</p>
-      </div>
+      {bottomContent ? (
+        <div>
+          <span>
+            <NearMeIcon />
+          </span>
+          <p>{bottomContent}</p>
+        </div>
+      ) : (
+        ''
+      )}
     </div>
   )
 }

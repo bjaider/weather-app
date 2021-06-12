@@ -1,23 +1,32 @@
 import React from 'react'
 import './style.scss'
 import HightlightsCards from '../hightlightsCards'
-const Hightlights = () => {
+const Hightlights = ({data}) => {
+  console.log(data)
   return (
     <div className="hightlights-container">
       <HightlightsCards
         title="Wind status"
         content="7"
         unit="mph"
-        bottomContent="WSW"
+        bottomContent={data.wind_direction_compass}
       />
       <HightlightsCards
         title="Humidity"
-        content="84"
+        content={data.humidity}
         unit="%"
         bottomContent="WSW"
       />
-      <HightlightsCards title="Visibility" content="6,4 " unit="miles" />
-      <HightlightsCards title="Air Pressure" content="998 " unit="mb" />
+      <HightlightsCards
+        title="Visibility"
+        content={data.visibility.toFixed(2).toString().replace(/\./g, ',')}
+        unit="miles"
+      />
+      <HightlightsCards
+        title="Air Pressure"
+        content={data.air_pressure}
+        unit=" mb"
+      />
     </div>
   )
 }

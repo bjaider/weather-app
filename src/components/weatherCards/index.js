@@ -13,7 +13,7 @@ const WeatherCard = ({date, state, max, min, data}) => {
                   ? 'Tomorrow'
                   : moment(item.applicable_date).format('ddd, MMM DD')}
               </p>
-              <img src={state} alt="" />
+              <img src={`${process.env.REACT_APP_STATE_IMAGES}/${item.weather_state_abbr}.svg`} alt="" />
               <div className="temperature">
                 <p>{`${Math.round(item.max_temp)}°C`}</p>
                 <p>{`${Math.round(item.min_temp)}°C`}</p>
