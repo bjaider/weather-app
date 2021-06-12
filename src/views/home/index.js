@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './style.scss'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router-dom'
@@ -10,8 +10,10 @@ import findCurrentLocation from '../../actions/findCurrentLocation'
 
 const Home = (props) => {
   const {findCurrentLocation, location} = props
-  console.log(location)
-  findCurrentLocation(1)
+  console.log("a<s",location)
+  useEffect(() => {
+    findCurrentLocation()
+  }, [])
   return (
     <div className="home-container">
       <CurrentWeather />

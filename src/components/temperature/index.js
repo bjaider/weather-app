@@ -1,7 +1,6 @@
 import React from 'react'
 import './style.scss'
 const Temperature = ({temperature, weatherState}) => {
-  console.log(temperature, weatherState)
   return (
     <div className="temperature-container">
       <div>

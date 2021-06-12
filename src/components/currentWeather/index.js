@@ -1,22 +1,20 @@
-import React, {useEffect, useState} from 'react'
+import React/* , {useEffect, useState}  */from 'react'
 import './style.scss'
 
-import {Button} from 'antd'
-import GpsFixedIcon from '@material-ui/icons/GpsFixed'
 
 import Date from '../date'
 import Location from '../location'
 import Temperature from '../temperature'
 import WeatherStateImage from '../weatherStateImage'
 
-import {location} from '../../api/location'
+/* import {location} from '../../api/location' */
 import SearchLocation from '../searchLocation'
 
 const CurrentWeather = () => {
-  const [data, setData] = useState([])
+/*   const [data, setData] = useState([])
   useEffect(() => {
     location()
-  }, [])
+  }, []) */
   return (
     <div className="current-weather-container">
       <SearchLocation />

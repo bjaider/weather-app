@@ -1,7 +1,7 @@
 const location = (state = [], action) => {
   switch (action.type) {
     case 'findCurrentLocation': {
-      return 'holi grupo'
+      return action.payload
     }
 
     default:
