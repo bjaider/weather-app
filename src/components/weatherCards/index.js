@@ -1,24 +1,27 @@
+import moment from 'moment'
 import React from 'react'
 import './style.scss'
-const WeatherCard = ({date, state, max, min}) => {
+const WeatherCard = ({date, state, max, min, data}) => {
   return (
     <div className="weather-card-container">
-      <div className="card">
-        <p>{date}</p>
-        <img src={state} alt="" />
-        <div className="temperature">
-          <p>{max}</p>
-          <p>{min}</p>
-        </div>
-      </div>
-      <div className="card">
-        <p>{date}</p>
-        <img src={state} alt="" />
-        <div className="temperature">
-          <p>{max}</p>
-          <p>{min}</p>
-        </div>
-      </div>
+      {data.consolidated_weather.map((item, index) => {
+        if (index !== 0) {
+          return (
+            <div key={item.id} className="card">
+              <p>
+                {index === 1
+                  ? 'Tomorrow'
+                  : moment(item.applicable_date).format('ddd, MMM DD')}
+              </p>
+              <img src={state} alt="" />
+              <div className="temperature">
+                <p>{`${Math.round(item.max_temp)}°C`}</p>
+                <p>{`${Math.round(item.min_temp)}°C`}</p>
+              </div>
+            </div>
+          )
+        }
+      })}
     </div>
   )
 }

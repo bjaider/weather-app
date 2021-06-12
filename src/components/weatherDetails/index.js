@@ -1,12 +1,22 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import {connect} from 'react-redux'
+import {withRouter} from 'react-router-dom'
 import DegreesConverter from '../degreesConverter'
 import Hightlights from '../hightlights'
 import WeatherCards from '../weatherCards'
 import './style.scss'
-const WeatherDetails = () => {
+const WeatherDetails = (props) => {
+  const {location} = props
+  const [data, setData] = useState(null)
+  useEffect(() => {
+    setData(location)
+  }, [location])
+  if (!data) {
+    return 'Cargando...'
+  }
   return (
     <div className="weather-details-container">
-      <DegreesConverter/>
+      <DegreesConverter />
       <WeatherCards
         date={'Tomorrow'}
         state={
@@ -14,10 +24,15 @@ const WeatherDetails = () => {
         }
         max={'16°C'}
         min={'11°C'}
+        data={data}
       />
-      <Hightlights/>
+      <Hightlights />
     </div>
   )
 }
 
-export default WeatherDetails
+const mapStateToProps = (state) => ({
+  location: state.location,
+})
+
+export default withRouter(connect(mapStateToProps)(WeatherDetails))

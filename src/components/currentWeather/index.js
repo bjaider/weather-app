@@ -14,11 +14,8 @@ import moment from 'moment'
 const CurrentWeather = (props) => {
   const {location} = props
   const [data, setData] = useState(null)
-  /*  const [loading, setLoading] = useState(true) */
   useEffect(() => {
     setData(location)
-    console.log(location)
-    /* setLoading(false) */
   }, [location])
 
   if (!data) {
