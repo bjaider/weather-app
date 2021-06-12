@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './style.scss'
 
 import {Button} from 'antd'
@@ -9,15 +9,17 @@ import Location from '../location'
 import Temperature from '../temperature'
 import WeatherStateImage from '../weatherStateImage'
 
+import {location} from '../../api/location'
+import SearchLocation from '../searchLocation'
+
 const CurrentWeather = () => {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    location()
+  }, [])
   return (
     <div className="current-weather-container">
-      <div className="search-places-location">
-        <Button className="search-button">Seach for places</Button>
-        <Button className="search-location">
-          <GpsFixedIcon style={{margin: 0}} />
-        </Button>
-      </div>
+      <SearchLocation />
       <WeatherStateImage
         url={
           'https://res.cloudinary.com/dhxg3zyjz/image/upload/v1623419204/weather-app/Shower_efwzcr.png'
