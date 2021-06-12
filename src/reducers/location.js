@@ -1,4 +1,4 @@
-const location = (state = [], action) => {
+const location = (state = null, action) => {
   switch (action.type) {
     case 'findCurrentLocation': {
       return action.payload

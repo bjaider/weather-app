@@ -7,11 +7,11 @@ const getLocation = (result) => ({
   payload: result,
 })
 
-const findCurrentLocation = () => {
+const findCurrentLocation = (id) => {
   return (dispatch) => {
-    location(1).then((result) => {
-      /* console.log(result) */
-      dispatch(getLocation(result))
+    location(id).then((response) => {
+      /* console.log(response.data) */
+      dispatch(getLocation(response.data))
     })
   }
 }

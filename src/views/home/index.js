@@ -9,8 +9,7 @@ import WeatherDetails from '../../components/weatherDetails'
 import findCurrentLocation from '../../actions/findCurrentLocation'
 
 const Home = (props) => {
-  const {findCurrentLocation, location} = props
-  console.log("a<s",location)
+  const {findCurrentLocation} = props
   useEffect(() => {
     findCurrentLocation()
   }, [])
@@ -31,4 +30,3 @@ const mapDispatchToProps = {
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
-/* export default Home */
