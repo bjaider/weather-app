@@ -1,37 +1,15 @@
 import React from 'react'
 import './style.scss'
-const HightlightsCards = () => {
+const HightlightsCards = ({title, content, unit, bottomContent}) => {
   return (
-    <div className="hightlights-cards-container">
-      <div className="cards">
-        <h1>Wind status</h1>
-        <p>
-          7<span>mph</span>
-        </p>
-        <div>
-          <p>WSW</p>
-        </div>
-      </div>
-      <div className="cards">
-        <h1>Wind status</h1>
-        <p>
-          7<span>mph</span>
-        </p>
-        <div>
-          <p>WSW</p>
-        </div>
-      </div>
-      <div className="cards">
-        <h1>Wind status</h1>
-        <p>
-          7<span>mph</span>
-        </p>
-      </div>
-      <div className="cards">
-        <h1>Wind status</h1>
-        <p>
-          7<span>mph</span>
-        </p>
+    <div className="cards">
+      <h1>{title}</h1>
+      <p>
+        {content}
+        <span>{unit}</span>
+      </p>
+      <div>
+        <p>{bottomContent}</p>
       </div>
     </div>
   )
