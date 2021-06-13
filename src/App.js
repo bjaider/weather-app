@@ -16,5 +16,23 @@ function App() {
     </div>
   )
 }
-
+/* function App() {
+  return (
+    <div className="App">
+      <Router>
+        <Switch>
+          <Route
+            path="/"
+            render={(props) => (
+              <>
+                <CurrentWeather />
+                <Home />
+              </>
+            )}
+          />
+        </Switch>
+      </Router>
+    </div>
+  )
+} */
 export default App

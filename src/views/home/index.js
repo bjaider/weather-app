@@ -7,26 +7,28 @@ import CurrentWeather from '../../components/currentWeather'
 import WeatherDetails from '../../components/weatherDetails'
 
 import findCurrentLocation from '../../actions/findCurrentLocation'
+import changeSidebarState from '../../actions/changeSidebarState'
 
 const Home = (props) => {
-  const {findCurrentLocation} = props
+  const {findCurrentLocation, sidebarState} = props
   useEffect(() => {
     findCurrentLocation()
   }, [])
   return (
     <div className="home-container">
-      <CurrentWeather />
+      {sidebarState ? <CurrentWeather /> : 'juanhsdjjnasd'}
       <WeatherDetails />
     </div>
   )
 }
 
 const mapStateToProps = (state) => ({
-  location: state.location,
+  sidebarState: state.sidebarState,
 })
 
 const mapDispatchToProps = {
   findCurrentLocation,
+  changeSidebarState,
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home))
