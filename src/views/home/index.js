@@ -8,6 +8,7 @@ import WeatherDetails from '../../components/weatherDetails'
 
 import findCurrentLocation from '../../actions/findCurrentLocation'
 import changeSidebarState from '../../actions/changeSidebarState'
+import Search from '../../components/search'
 
 const Home = (props) => {
   const {findCurrentLocation, sidebarState} = props
@@ -16,7 +17,7 @@ const Home = (props) => {
   }, [])
   return (
     <div className="home-container">
-      {sidebarState ? <CurrentWeather /> : 'juanhsdjjnasd'}
+      {sidebarState ? <Search /> : 'asdasd'}
       <WeatherDetails />
     </div>
   )
