@@ -14,7 +14,7 @@ $buttonColor: #3c47e9;
     align-items: center;
     width: 100%;
     /* margin: 80px; */
-    padding: 80px;
+    padding: 80px 50px 10px 50px;
   }
 
   input {
@@ -34,5 +34,10 @@ $buttonColor: #3c47e9;
     margin-left: 10px;
     width: 86px;
     height: 48px;
+  }
+
+  .list {
+    padding: 50px 50px 10px 50px;
+    width: 100%;
   }
 }
