@@ -20,7 +20,7 @@ const Hightlights = ({data}) => {
       <HightlightsCards
         title="Visibility"
         content={data.visibility.toFixed(2).toString().replace(/\./g, ',')}
-        unit="miles"
+        unit=" miles"
       />
       <HightlightsCards
         title="Air Pressure"

@@ -11,13 +11,13 @@ import changeSidebarState from '../../actions/changeSidebarState'
 import Search from '../../components/search'
 
 const Home = (props) => {
-  const {findCurrentLocation, sidebarState} = props
+  const {findCurrentLocation, sidebarState, city} = props
   useEffect(() => {
-    findCurrentLocation()
-  }, [])
+    findCurrentLocation(city)
+  }, [city])
   return (
     <div className="home-container">
-      {sidebarState ? <Search /> : 'asdasd'}
+      {sidebarState ? <CurrentWeather /> : <Search />}
       <WeatherDetails />
     </div>
   )
@@ -25,6 +25,7 @@ const Home = (props) => {
 
 const mapStateToProps = (state) => ({
   sidebarState: state.sidebarState,
+  city: state.city,
 })
 
 const mapDispatchToProps = {

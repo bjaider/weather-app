@@ -1,8 +1,8 @@
 import axios from 'axios'
 
-export const location = () => {
+export const location = (city) => {
   return axios
-    .get(`${process.env.REACT_APP_API_URL}/368148/`)
+    .get(`${process.env.REACT_APP_API_URL}/${city}/`)
     .then((response) => {
       /* console.log(response) */
       return response
