@@ -9,11 +9,15 @@
     margin: 0;
     line-height: 19px;
   }
-  .card {
-    padding: 15px;
-    margin: 10px;
+  .cards {
+    /*  width: 68.5%; */
+    /*     background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
   }
-  div {
+  .card {
     background-color: $currentWeatherBackground;
     width: 120px;
     height: 177px;
@@ -21,6 +25,8 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+    padding: 15px;
+    margin: 10px;
     .temperature {
       height: 20px;
       display: flex;
@@ -41,11 +47,19 @@
   }
 }
 
-@include customMaxBreakPoint(375) {
-  .weather-card-container {
-   /*  width: 50px; */
-  /*  background-color: yellow; */
-   justify-content: flex-start;
-   flex-wrap: wrap;
+@include customMaxBreakPoint(550) {
+  /*   .weather-card-container {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  } */
+  .cards {
+     width: 68.5%;
+    /*     background-color: blue; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
   }
 }

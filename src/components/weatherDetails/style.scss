@@ -10,7 +10,7 @@
   }
 }
 
-@include customMaxBreakPoint(375) {
+@include customMaxBreakPoint(550) {
   .weather-details-container {
     flex: 1;
     width: 100%;

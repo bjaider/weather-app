@@ -15,12 +15,26 @@ const Home = (props) => {
   useEffect(() => {
     findCurrentLocation(city)
   }, [city])
-  return (
-    <div className="home-container">
-      {sidebarState ? <CurrentWeather /> : <Search />}
-      <WeatherDetails />
-    </div>
-  )
+  const showComponents = () => {
+    if (sidebarState) {
+      return (
+        <>
+          <CurrentWeather />
+          <WeatherDetails />
+        </>
+      )
+    } else if (!sidebarState && window.screen.width > 550) {
+      return (
+        <>
+          <Search />
+          <WeatherDetails />
+        </>
+      )
+    } else if (!sidebarState && window.screen.width < 550) {
+      return <Search />
+    }
+  }
+  return <div className="home-container">{showComponents()}</div>
 }
 
 const mapStateToProps = (state) => ({

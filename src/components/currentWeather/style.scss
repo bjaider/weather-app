@@ -12,7 +12,7 @@ $buttonColor: #6e707a;
 
 
 
-@include customMaxBreakPoint(375) {
+@include customMaxBreakPoint(550) {
   .current-weather-container{
     padding: 30px;
     box-sizing: border-box;
