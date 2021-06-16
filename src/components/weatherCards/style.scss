@@ -1,4 +1,5 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 .weather-card-container {
   color: white;
   display: flex;
@@ -37,5 +38,14 @@
   img {
     width: 56.44px;
     height: 62px;
+  }
+}
+
+@include customMaxBreakPoint(375) {
+  .weather-card-container {
+   /*  width: 50px; */
+  /*  background-color: yellow; */
+   justify-content: flex-start;
+   flex-wrap: wrap;
   }
 }

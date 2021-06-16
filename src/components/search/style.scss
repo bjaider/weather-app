@@ -7,7 +7,14 @@ $buttonColor: #3c47e9;
   justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-
+  position: relative;
+  .close-icon {
+    position: absolute;
+    right: 45px;
+    top: 25px;
+    cursor: pointer;
+    fill: #E7E7EB;
+  }
   .input-container {
     display: flex;
     justify-content: center;

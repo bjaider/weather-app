@@ -1,11 +1,12 @@
 @import '../../styles/variables';
+@import '../../styles/mixins';
 $buttonColor: #6e707a;
 .hightlights-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  
+
   .cards {
     background-color: #1e213a;
     padding: 22px 50px;
@@ -59,6 +60,15 @@ $buttonColor: #6e707a;
         font-size: 36px;
         font-weight: normal;
       }
+    }
+  }
+}
+
+@include customMaxBreakPoint(375) {
+  .hightlights-container {
+    .cards {
+      width: 100%;
+      margin-right: 0px !important;
     }
   }
 }

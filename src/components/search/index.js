@@ -6,11 +6,14 @@ import {search} from '../../api/search'
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
 import changeCity from '../../actions/changeCity'
+import changeSidebarState from '../../actions/changeSidebarState'
+import CloseIcon from '@material-ui/icons/Close'
+
 const Search = (props) => {
-  const {changeCity, city} = props
+  const {changeCity, changeSidebarState} = props
   const [location, setLocation] = useState('')
   const [data, setData] = useState([])
-/*   console.log(city)
+  /*   console.log(city)
   useEffect(() => {
     console.log(data)
   }, [data]) */
@@ -19,6 +22,7 @@ const Search = (props) => {
   }
   return (
     <div className="search-container">
+      <CloseIcon className="close-icon" onClick={(e)=>changeSidebarState(true)} />
       <div className="input-container">
         <input
           type="text"
@@ -49,6 +53,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   changeCity,
+  changeSidebarState,
 }
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Search))

@@ -10,7 +10,7 @@ const getLocation = (result) => ({
 const findCurrentLocation = (id) => {
   return (dispatch) => {
     location(id).then((response) => {
-      /* console.log(response.data) */
+      console.log(response.data)
       dispatch(getLocation(response.data))
     })
   }
