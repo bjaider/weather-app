@@ -1,4 +1,4 @@
-const initialState = localStorage.getItem('woeid')
+const initialState = localStorage.getItem('woeid') || 368148
 const city = (state = initialState, action) => {
   switch (action.type) {
     case 'changeCity': {
