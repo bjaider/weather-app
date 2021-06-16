@@ -10,12 +10,11 @@
     line-height: 19px;
   }
   .cards {
-    /*  width: 68.5%; */
-    /*     background-color: blue; */
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
+    justify-content: center;
+    /* align-items: flex-start; */
   }
   .card {
     background-color: $currentWeatherBackground;
@@ -44,22 +43,5 @@
   img {
     width: 56.44px;
     height: 62px;
-  }
-}
-
-@include customMaxBreakPoint(550) {
-  /*   .weather-card-container {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  } */
-  .cards {
-     width: 68.5%;
-    /*     background-color: blue; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: center;
   }
 }

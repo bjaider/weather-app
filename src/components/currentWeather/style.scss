@@ -10,9 +10,13 @@ $buttonColor: #6e707a;
   align-items: center;
 }
 
+@include customMaxBreakPoint(1250) {
+  .current-weather-container {
+    width: 40%;
+  }
+}
 
-
-@include customMaxBreakPoint(550) {
+@include customMaxBreakPoint(768) {
   .current-weather-container{
     padding: 30px;
     box-sizing: border-box;

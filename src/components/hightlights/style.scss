@@ -64,7 +64,7 @@ $buttonColor: #6e707a;
   }
 }
 
-@include customMaxBreakPoint(550) {
+@include customMaxBreakPoint(768) {
   .hightlights-container {
     .cards {
       width: 100%;

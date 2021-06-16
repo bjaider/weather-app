@@ -23,14 +23,14 @@ const Home = (props) => {
           <WeatherDetails />
         </>
       )
-    } else if (!sidebarState && window.screen.width > 550) {
+    } else if (!sidebarState && window.screen.width > 768) {
       return (
         <>
           <Search />
           <WeatherDetails />
         </>
       )
-    } else if (!sidebarState && window.screen.width < 550) {
+    } else if (!sidebarState && window.screen.width < 768) {
       return <Search />
     }
   }
